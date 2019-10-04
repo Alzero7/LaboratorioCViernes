@@ -1,64 +1,68 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+	/*	Jesus Armando Espino Rodriguez
+				04/10/19
+				006
+				Viernes 7:00am - 9:00am
+				1844607
+	*/
+	
+	/* Actividad 1  */
 
 int main() 
 {
-	/*Jesus Armando Espino Rodriguez
-			27/09/2019
-			006
-			Viernes 7:00am.- 9:00am.
-			1844607
-	*/
-	
-	/*   Actividad 1   */
-	
 	system("color 0B");
 	
-	int numeroDeCoches[24]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
-	int R;
-	int n;
-	
-	printf("\n\t Que desea hacer joven amo?");
-	do
+	int ventasEmpleadoOficinaEdificio[6][10][2];
+	int i,j,k;   
+	/* i sera el numero de empleado
+	   j sera el numero de oficina
+	   k sera el numero de edificio
+	*/        
+	for(i=0;i<6;i++)
 	{
-	R=2;
-	numeroDeCoches[R]=57;
-	printf("\n\n\t La posicion %d retomara el valor: %d \n\n\t ",R,numeroDeCoches[R]);
+			for(j=0;j<10;j++)
+			{
+					for(k=0;k<2;k++)
+					{
+						if(i==3 && j==7 && k==1)
+						{
+						ventasEmpleadoOficinaEdificio[i][j][k]=4234;
+						printf("\nEl empleado numero %d de la oficina numero %d del edificio numero %d ha vendido %d unidades",i,j,k,ventasEmpleadoOficinaEdificio[i][j][k]);
+					 }
+					}
+			}
+	}
 	
-	R=21;
-	numeroDeCoches[R]=57;
-	printf("La posicion %d retomara el valor: %d \n\n\t ",R,numeroDeCoches[R]);
 	
-	printf("Desea algo mas:(1=si,2=no)");
-	scanf("%d",&n);
-	}while(n==1);
-	
-	
-	/*   Actividad 2   */
-	
-	int A=8;
-	int B=4;
-	
-	printf("\n\t Que desea hacer joven amo?");
-	do
+	/* Preguntas.
+				
+				a)¿Cuantos elementos componen el array multidimensional?
+				
+				-Apartir de los tres elementos hacia arriba.
+				
+				b)¿Que ocurre si intentamos mostrar en pantalla un 
+							valor con un indice que no esta definido por
+							ese array multidimensional?
+				
+				-El programa lo saltara ya que no existe una casilla para otorgarle ese valor
+	*/
+				
+		for(i=0;i<6;i++)
 	{
-	R=2;
-	numeroDeCoches[R]=57;
-	printf("\n\n\t La posicion %d retomara el valor: %d \n\n\t ",R,numeroDeCoches[R]);
-	
-	R=21;
-	numeroDeCoches[R]=57;
-	printf("La posicion %d retomara el valor: %d \n\n\t ",R,numeroDeCoches[R]);
-	
-	R=A/B;
-	numeroDeCoches[R]=57;
-	printf("La posicion %d entre %d retomara el valor: %d \n\n\t ",A,B,numeroDeCoches[R]);
-	
-	fflush(stdin);
-	printf("Desea algo mas:(1=si,2=no)");
-	scanf("%d",&n);
-	}while(n==1);
+			for(j=0;j<10;j++)
+			{
+					for(k=0;k<2;k++)
+					{
+						if(i==3 && j==7 && k==1)
+						{
+						ventasEmpleadoOficinaEdificio[i][j][k]=4234+10;
+						printf("\nEl empleado numero %d de la oficina numero %d del edificio numero %d ha vendido %d unidades",i,j,k,ventasEmpleadoOficinaEdificio[i][j][k]);
+					 }
+					}
+			}
+	}
 	
 	
 	return 0;
